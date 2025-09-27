@@ -317,7 +317,7 @@ Results Found: 3
 
 ## 👤 Author
 
-**Your Name**
+**Reuben Korsi Amuzu**
 - GitHub: [@Amson-tECH](https://github.com/Amson-tECH)
 - Email: reubenamuzu23@gmail.com
 
@@ -325,7 +325,8 @@ Results Found: 3
 
 Give a ⭐️ if this project helped you!
 
----
+
 
 **Built with ❤️ using vanilla JavaScript, CSS3, and HTML5**
+
 
