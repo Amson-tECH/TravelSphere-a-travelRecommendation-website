@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelSphere</title>
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="./travel_recommendation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Your Original CSS - Unchanged */
+    
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar"> 
+    <div class="logo-section">
+      <div class="logo">✈</div>
+      <div class="brand-name">TravelSphere</div>
+    </div>
+    <ul class="nav-links">
+      <li> <a href="./travel_recommendation.html" class="active">Home</a></li>
+      <li><a href="./travel_about.html">About Us</a></li>
+      <li><a href="./travel_contact.html">Contact Us</a></li>
+    </ul>
+    <div class="search-container-1">
+      <input type="text" class="search-input-1" placeholder="Search destinations..." maxlength="50">
+      <div class="search-buttons-1">
+        <span class="search-icon">🔍</span>
+        <button class="search-btn-1" onclick="searchAction(this)">Search</button>
+        <button class="clear-btn-1" onclick="clearAction(this)">Clear</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <!-- Content -->
+    <div class="hero-content">
+      <h1>EXPLORE <br> DREAM <br> DESTINATION</h1>
+      <p>
+        It encourages exploration of unfamiliar territories, embracing diverse cultures 
+        and landscapes, while pursuing the desired destination that captivates the heart 
+        and ignites a sense of wonder.
+      </p>
+      <button class="btn">BOOK NOW</button>
+    </div>
+  </section>
+
+  <!-- Search Results Section (Only Addition) -->
+  <section class="search-results" id="searchResults">
+    <div class="results-container">
+      <div id="resultsContent">
+        <div class="no-results">
+          🎯 Enter a search term and click "Search" to find amazing destinations!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./travel_recommendation.js"></script>
+</body>
+</html>

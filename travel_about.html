@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - TravelSphere</title>
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
+      line-height: 1.6;
+      color: white;
+      background: url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Navbar */
+    .navbar{
+      background: rgb(62, 60, 60);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow:  0 2px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 0 0 auto;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #2c3e50;
+      font-size: 18px;
+    }
+    .brand-name {
+      color: white;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+    .nav-links {
+      flex: 1;
+      display: flex;
+      gap: 40px;
+      list-style: none;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-1px);
+    }
+    .nav-links a.active {
+      background: rgba(255, 255, 255, 0.15);
+      font-weight: 600;
+    }
+    .search-container-1 {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      width: 350px;
+      flex: 0 0 auto;
+      margin-left: auto; 
+    }
+    .search-input-1 {
+      width: 100%;
+      padding: 12px 150px 12px 15px;
+      border: none;
+      border-radius: 25px;
+      font-size: 14px;
+      outline: none;
+      background: white;
+      color:  #4f7c61;
+      margin-right: -18px;
+    }
+    .search-input::placeholder {
+      color: #4f7c61;                    
+    }
+    .search-buttons-1 {
+      position: absolute;
+      right: 5px;
+      display: flex;
+      gap: 5px;
+    }
+    .search-btn-1, .clear-btn-1 {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .search-btn-1 {
+      background:  #4f7c61;
+      color: white;
+    }
+    .search-btn-1:hover {
+      background:  #3b5a47;
+    }
+    .clear-btn-1 {
+      background:  #4f7c61;
+      color: white;
+    }
+    .clear-btn-1:hover {
+      background:  #3b5a47;
+    }
+
+    /* Social Icons */
+    .social-icons {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .social-icons a {
+      color: white;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #00e1ff;
+    }
+
+    /* About Section */
+    .about {
+      padding: 80px 60px;
+      background: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+    }
+    .about-content h1 {
+      font-size: 50px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      margin-left: 70px;
+    }
+    .about-content p {
+      font-size: 18px;
+      margin-bottom: 15px;
+      line-height: 1.6;
+      margin-left: 70px;
+
+    }
+
+    /* Team Section */
+    .team-section {
+      margin-top: 60px;
+    }
+    .team-section h2 {
+      font-size: 40px;
+      margin-left: 70px;
+      margin-bottom: 30px;
+    }
+    .team-section h2 span {
+      margin-left: 70px;
+    }
+    .team-cards {
+      display: flex;
+      gap: 30px;
+      margin-left: 50px;
+      flex-wrap: wrap;
+      margin-bottom: 80px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      backdrop-filter: blur(5px);
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+      color: #00e1ff;
+    }
+    .card p {
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+    .role-btn {
+      background: #00e1ff;
+      color: #000;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .role-btn:hover {
+      background: #fff;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar"> 
+    <div class="logo-section">
+      <div class="logo">✈</div>
+      <div class="brand-name">TravelSphere</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="./travel_recommendation.html">Home</a></li>
+      <li><a href="./travel_about.html" class="active">About Us</a></li>
+      <li><a href="./travel_contact.html">Contact Us</a></li>
+    </ul>
+    <div class="search-container-1">
+      <input type="text" class="search-input-1" placeholder="Search destinations...">
+      <div class="search-buttons-1">
+        <span class="search-icon">🔍</span>
+        <button class="search-btn-1">Search</button>
+        <button class="clear-btn-1">Clear</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section class="about">
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <!-- Content -->
+    <div class="about-content">
+      <h1>ABOUT US</h1>
+      <p>
+        Welcome to <strong>TravelSphere</strong>! We are a team of passionate explorers 
+        dedicated to making your travel dreams a reality. Our mission is to provide 
+        unforgettable experiences across the globe, whether you’re chasing adventures, 
+        seeking relaxation, or discovering new cultures.  
+      </p>
+      <p>
+        At TravelSphere, we believe in <strong>integrity, innovation, customer satisfaction, and teamwork</strong>.  
+        We are committed to making every journey unique and memorable, while ensuring 
+        comfort, safety, and value for our travelers.
+      </p>
+    </div>
+
+    <!-- Team Section -->
+    <div class="team-section">
+        <div class="team-cards">
+          <h2><span>Our</span> <br> <span>Team</span> </h2>
+        <div class="card">
+          <h3>John Doe</h3>
+          <p>John is responsible for leading the company with vision and dedication.</p>
+          <button class="role-btn">CEO</button>
+        </div>
+        <div class="card">
+          <h3>Celina Thomas</h3>
+          <p>Celina manages the team and ensures every trip is seamless and exciting.</p>
+          <button class="role-btn">Team Lead</button>
+        </div>
+        <div class="card">
+          <h3>Mike Tysen</h3>
+          <p>Mike ensures all trips are delivered with excellence and on time.</p>
+          <button class="role-btn">Delivery Head</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
