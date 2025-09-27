@@ -2,7 +2,7 @@
 
 A modern, responsive travel recommendation website that helps users discover amazing destinations around the world. Built with vanilla HTML, CSS, and JavaScript with smart search functionality and beautiful visual design.
 
-![TravelSphere Preview]()
+![TravelSphere Preview](travelRecommendation.png)
 
 ## ✨ Features
 
@@ -328,3 +328,4 @@ Give a ⭐️ if this project helped you!
 ---
 
 **Built with ❤️ using vanilla JavaScript, CSS3, and HTML5**
+
